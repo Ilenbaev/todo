@@ -5,6 +5,10 @@ const AddContact = (props) => {
   let [surname, setSurname] = useState("");
 
   function handleClick() {
+    if (!name.trim() || !surname.trim()) {
+      alert("Заполните поле");
+      return;
+    }
     let newContact = {
       name,
       surname,
